@@ -1,0 +1,208 @@
+body 
+{ 
+ 	 background-color: #f4f5fa;
+  	/* background: url("../img/patterns/login-bg.jpg") repeat;  */
+  	font-family: 'Hind', sans-serif;
+	font-size: 14px;
+	line-height: 1.45;
+	color: #979797;
+}
+.block-wrapper 
+{
+    background: #fff;
+    /* border: 1px solid #d2d2d2; */
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 20px 0px rgb(219, 219, 219);
+	-moz-box-shadow: 0px 0px 20px 0px rgb(219, 219, 219);
+	box-shadow: 0px 0px 20px 0px rgb(219, 219, 219);
+	margin-top: 6%;
+	border-top:5px solid #20b4d7;
+	
+}
+.title 
+{
+    margin: 0px;
+    background: linear-gradient(135deg, rgb(5, 163, 166) 0%, rgb(78, 199, 201) 100%);
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+.border-bottom 
+{
+    border-bottom: 1px solid #f4f5fa;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.register-social-block 
+{
+    margin-top: 36px;
+}
+.register-social-block .nav-pills > li 
+{
+    display: inline-table;
+    float: none;
+}
+.register-social-block .nav > li > a:focus,.register-social-block .nav > li > a:hover 
+{
+    text-decoration: none;
+    background: none;
+}
+.social-network-block
+{
+    margin-top: 50px;
+}
+.sign-in .social-network-block
+{
+    margin-top: 25px;
+}
+.social-network-block a img
+{
+    transition: 0.2s ease all;
+}
+.social-network-block a img:hover 
+{
+    margin-top: -8px;
+}
+.block-wrapper h5
+{
+	letter-spacing: 1px;
+}
+.social-network-block-bottom 
+{
+    margin: 40px 0px;
+    border-top: 1px solid #f4f5fa;
+    padding-top: 20px;
+}
+.form-control:focus 
+{
+    border-color: #dbdbdb;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(238, 238, 238);
+}
+.sign-up-form 
+{
+    margin: 25px 0px 50px 0px;
+}
+.sign-up-form .form-group
+{
+	margin-bottom: 10px;
+}
+.sign-in-form .form-group
+{
+	margin-bottom: 20px;
+}
+.custom-btn 
+{
+    margin: 12px 0px;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    font-weight: 600;
+	letter-spacing: 1px;
+}
+.btn-primary 
+{
+    background: #1a8aa4 !important;
+    border: #1a8aa4 !important;
+    color: #ffffff;
+    transition: 0.5s ease all;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active
+{
+    color: #ffffff;
+    background: #00c0c7 !important;
+    border: #00c0c7 !important;
+}
+
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 1.25em; height: 1.25em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '\2713\0020';
+  position: absolute;
+  top: .20em; 
+  left: .22em;
+  font-size: 15px;
+  line-height: 0.8;
+  color: #20b4d7;
+  transition: all .2s;
+  font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+
+
+/* hover style just for information */
+label:hover:before {
+  border: 2px solid #20b4d7!important;
+}
+
+
+/* Sign In Code Starts */
+
+.sign-in-inner-block 
+{
+    padding: 25px 40px;
+}
+
+
+/* Sign In Code Ends */
+
+.footer 
+{
+    text-align: center;
+    background: #f2f3f7;
+    padding: 5px 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 12px;
+    margin-top:20px;
+}
+.footer p
+{
+	margin-bottom: 0px;
+}

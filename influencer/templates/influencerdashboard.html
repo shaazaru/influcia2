@@ -1,0 +1,585 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>influicea - Connect brands with influencers</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Fav Icon  -->
+	<link rel="shortcut icon" href="{% static 'assets/images/favicon.png' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Exo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet">
+
+    <link type="text/css" href="{% static 'assets/fonts/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">    
+    <link type="text/css" href="{% static 'assets/fonts/themify-icons/themify-icons.css' %}" rel="stylesheet">          
+    <link type="text/css" href="{% static 'assets/css/styles.css' %}" rel="stylesheet"> 
+    <link type="text/css" href="{% static 'assets/css/styles-influencer.css' %}" rel="stylesheet">                          
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' media='all' />
+
+    <!--[if lt IE 10]>
+        <script type="text/javascript" src="assets/js/media.match.min.js"></script>
+        <script type="text/javascript" src="assets/js/respond.min.js"></script>
+        <script type="text/javascript" src="assets/js/placeholder.min.js"></script>
+    <![endif]-->
+    <!-- The following CSS are included as plugins and can be removed if unused-->
+  
+
+
+</head>
+
+    <body class="animated-content">
+        
+        <header id="topnav" class="navbar navbar-default navbar-fixed-top" role="banner">
+
+        	<div class="col-md-12">
+
+			<div class="logo-area">
+				<!--<span id="trigger-sidebar" class="toolbar-trigger toolbar-icon-bg hidden-lg hidden-md hidden-sm">
+					<a data-toggle="tooltips" data-placement="right" title="Toggle Sidebar">
+						<span class="icon-bg">
+							<i class="ti ti-menu"></i>
+						</span>
+					</a>
+				</span>-->
+				<a href="{% url 'influencerdashboard' %}"><img src="{% static 'assets/img/logo-dark.png' %}" height="40" alt="Influicea Logo" data-toggle="tooltip" data-placement="bottom" title="Influicea Logo"></a>
+				<!-- <div class="toolbar-icon-bg hidden-xs" id="toolbar-search">
+		            <div class="input-group">
+		            	<span class="input-group-btn"><button class="btn" type="button"><i class="ti ti-search"></i></button></span>
+						<input type="text" class="form-control" placeholder="Search...">
+						<span class="input-group-btn"><button class="btn" type="button"><i class="ti ti-close"></i></button></span>
+					</div>
+		        </div> -->
+
+			</div><!-- logo-area -->
+
+			<ul class="nav navbar-nav toolbar pull-right">
+
+		        <li class="toolbar-icon-bg hidden-xs" id="trigger-fullscreen" data-toggle="tooltip" data-placement="bottom" title="Full Screen">
+		            <a href="#" class="toggle-fullscreen"><span class="icon-bg"><i class="ti ti-fullscreen"></i></span></i></a>
+		        </li>
+
+		        <li class="dropdown toolbar-icon-bg hidden-xs" data-toggle="tooltip" data-placement="bottom" title="Messages">
+					<a href="#" class="hasnotifications dropdown-toggle" data-toggle='dropdown'><span class="icon-bg"><i class="ti ti-email"></i></span>
+						<span class="badge badge-deeporange">2</span></a>
+					<div class="dropdown-menu notifications arrow animate__animated animate__fadeIn">
+						<div class="topnav-dropdown-header">
+							<span>Messages</span>
+						</div>
+						<div class="scroll-pane">
+							<ul class="media-list scroll-content">
+								<li class="media notification-message">
+									<a href="#">
+										<div class="media-left">
+											<img class="img-circle avatar" src="http://placehold.it/300&text=Placeholder" alt="" />
+										</div>
+										<div class="media-body">
+											<h4 class="notification-heading"><strong>Vincent Keller</strong> <span class="text-gray">‒ Design should be ...</span></h4>
+											<span class="notification-time">2 mins ago</span>
+										</div>
+									</a>
+								</li>
+								<li class="media notification-message">
+									<a href="#">
+										<div class="media-left">
+											<img class="img-circle avatar" src="http://placehold.it/300&text=Placeholder" alt="" />
+										</div>
+										<div class="media-body">
+											<h4 class="notification-heading"><strong>Frend Pratt</strong> <span class="text-gray">‒ I will start with the ...</span></h4>
+											<span class="notification-time">40 mins ago</span>
+										</div>
+									</a>
+								</li>
+								<li class="media notification-message">
+									<a href="#">
+										<div class="media-left">
+											<img class="img-circle avatar" src="http://placehold.it/300&text=Placeholder" alt="" />
+										</div>
+										<div class="media-body">
+											<h4 class="notification-heading"><strong>Cynthia Hines</strong> <span class="text-gray">‒ Interior bits are ...</span></h4>
+											<span class="notification-time">6 hours ago</span>
+										</div>
+									</a>
+								</li>
+								<li class="media notification-message">
+									<a href="#">
+										<div class="media-left">
+											<img class="img-circle avatar" src="http://placehold.it/300&text=Placeholder" alt="" />
+										</div>
+										<div class="media-body">
+											<h4 class="notification-heading"><strong>Robin Horton</strong> <span class="text-gray">‒ Are you even ...</span></h4>
+											<span class="notification-time">8 days ago</span>
+										</div>
+									</a>
+								</li>
+								<li class="media notification-message">
+									<a href="#">
+										<div class="media-left">
+											<img class="img-circle avatar" src="http://placehold.it/300&text=Placeholder" alt="" />
+										</div>
+										<div class="media-body">
+											<h4 class="notification-heading"><strong>Amanda Torrez</strong> <span class="text-gray">‒ The message is ...</span></h4>
+											<span class="notification-time">16 hours ago</span>
+										</div>
+									</a>
+								</li>
+								<li class="media notification-message">
+									<a href="#">
+										<div class="media-left">
+											<img class="img-circle avatar" src="http://placehold.it/300&text=Placeholder" alt="" />
+										</div>
+										<div class="media-body">
+											<h4 class="notification-heading"><strong>Khan Farhan</strong> <span class="text-gray">‒ Expected the stuff ...</span></h4>
+											<span class="notification-time">2 days ago</span>
+										</div>
+									</a>
+								</li>
+								<li class="media notification-message">
+									<a href="#">
+										<div class="media-left">
+											<img class="img-circle avatar" src="http://placehold.it/300&text=Placeholder" alt="" />
+										</div>
+										<div class="media-body">
+											<h4 class="notification-heading"><strong>Will Whedon</strong> <span class="text-gray">‒ The movie of this ...</span></h4>
+											<span class="notification-time">4 days ago</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="topnav-dropdown-footer">
+							<a href="#">See all messages</a>
+						</div>
+					</div>
+				</li>
+				
+				<li class="dropdown toolbar-icon-bg" data-toggle="tooltip" data-placement="bottom" title="Notifications">
+					<a href="#" class="hasnotifications dropdown-toggle" data-toggle='dropdown'><span class="icon-bg"><i class="ti ti-bell"></i></span><span class="badge badge-deeporange">2</span></a>
+					<div class="dropdown-menu notifications arrow animate__animated animate__fadeIn">
+						<div class="topnav-dropdown-header">
+							<span>Notifications</span>
+						</div>
+						<div class="scroll-pane">
+							<ul class="media-list scroll-content">
+								<li class="media notification-success">
+									<a href="#">
+										<div class="media-left">
+											<span class="notification-icon"><i class="ti ti-check"></i></span>
+										</div>
+										<div class="media-body">
+											<h4 class="notification-heading">Update 1.0.4 successfully pushed</h4>
+											<span class="notification-time">8 mins ago</span>
+										</div>
+									</a>
+								</li>
+								<li class="media notification-info">
+									<a href="#">
+										<div class="media-left">
+											<span class="notification-icon"><i class="ti ti-check"></i></span>
+										</div>
+										<div class="media-body">
+											<h4 class="notification-heading">Update 1.0.3 successfully pushed</h4>
+											<span class="notification-time">24 mins ago</span>
+										</div>
+									</a>
+								</li>
+								<li class="media notification-teal">
+									<a href="#">
+										<div class="media-left">
+											<span class="notification-icon"><i class="ti ti-check"></i></span>
+										</div>
+										<div class="media-body">
+											<h4 class="notification-heading">Update 1.0.2 successfully pushed</h4>
+											<span class="notification-time">16 hours ago</span>
+										</div>
+									</a>
+								</li>
+								<li class="media notification-indigo">
+									<a href="#">
+										<div class="media-left">
+											<span class="notification-icon"><i class="ti ti-check"></i></span>
+										</div>
+										<div class="media-body">
+											<h4 class="notification-heading">Update 1.0.1 successfully pushed</h4>
+											<span class="notification-time">2 days ago</span>
+										</div>
+									</a>
+								</li>
+								<li class="media notification-danger">
+									<a href="#">
+										<div class="media-left">
+											<span class="notification-icon"><i class="ti ti-arrow-up"></i></span>
+										</div>
+										<div class="media-body">
+											<h4 class="notification-heading">Initial Release 1.0</h4>
+											<span class="notification-time">4 days ago</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="topnav-dropdown-footer">
+							<a href="#">See all notifications</a>
+						</div>
+					</div>
+				</li>
+
+				<li class="dropdown toolbar-icon-bg" data-toggle="tooltip" data-placement="bottom" title="My Account">
+					<a href="#" class="dropdown-toggle username" data-toggle="dropdown">
+						<span class="icon-bg"><i class="ti ti-more"></i></span></i>
+					</a>
+					<ul class="dropdown-menu userinfo arrow animate__animated animate__fadeIn">
+						<li><a href="#/"><i class="ti ti-user"></i><span>Profile</span><span class="badge badge-info pull-right">80%</span></a></li>
+						<li><a href="#/"><i class="ti ti-panel"></i><span>Account</span></a></li>
+						<li><a href="#/"><i class="ti ti-settings"></i><span>Settings</span></a></li>
+						<li class="divider"></li>
+						<li><a href="#/"><i class="ti ti-stats-up"></i><span>Earnings</span></a></li>
+						<li><a href="#/"><i class="ti ti-view-list-alt"></i><span>Statement</span></a></li>
+						<li><a href="#/"><i class="ti ti-money"></i><span>Withdrawals</span></a></li>
+						<li class="divider"></li>
+						<li><a href="#/"><i class="ti ti-shift-right"></i><span>Sign Out</span></a></li>
+					</ul>
+				</li>
+
+			</ul>
+
+		</div>
+
+	</header>
+
+        <div id="wrapper">
+            <div id="layout-static">
+                <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+                <div class="sidebar-inner-content">
+                    <div class="--static-sidebar">
+                        <div class="--sidebar">
+	<div class="widget">
+        <div class="widget-body">
+            <div class="userinfo">
+                <div class="avatar">
+                    <img src="{% static 'assets/img/profile-pic.png' %}" class="img-responsive img-circle" data-toggle="tooltip" data-placement="bottom" alt="Influencer Avatar" title="Influencer Avatar"> 
+                </div>
+                <div class="info">
+                    <span class="username">Jinson E M</span><br/>
+                    <span class="useremail">jinson.em@b-mates.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="widget stay-on-collapse" id="widget-sidebar">
+        <nav role="navigation" class="widget-body">
+	<ul class="acc-menu">
+		<li><a href="influencer-dashboard.html"><i class="ti ti-home"></i><span>Dashboard</span><!-- <span class="badge badge-teal">2</span> --></a></li>
+		<li><a href="influencer-offers.html"><i class="ti ti-receipt"></i><span>Offers</span></span></a></li>
+		<li><a href="influencer-campaign.html"><i class="ti ti-announcement"></i><span>Campaigns</span></span></a></li>
+		<li><a href="influencer-favorite.html"><i class="ti ti-heart"></i><span>Favorites</span></span></a></li>
+		<li><a href="influencer-invite-recieved.html"><i class="ti ti-check"></i><span>Invites Recieved</span></span></a></li>
+		<li><a href="influencer-feeds.html"><i class="ti ti-rss-alt"></i><span>Feeds</span></a></li>
+		<li><a href="influencer-media-kit.html"><i class="ti ti-bag"></i><span>Media Kit</span></span></a></li>
+		<!--<li>
+			<span id="trigger-sidebar" class="toolbar-trigger toolbar-icon-bg">
+				<a data-toggle="tooltips" data-placement="right" title="Toggle Sidebar">
+					<span>
+						<i onclick="myFunction(this)" class="fa fa-chevron-circle-left"></i>
+					</span>
+				</a>
+			</span>
+		</li>-->
+	</ul>
+</nav>
+    </div>
+</div>
+
+</div>
+                    </div>
+                </div>
+    <div id="main">
+		
+		<div id="influencers-dashboard-wrapper">
+			
+			<div class="static-content-wrapper">
+                   
+                <div class="static-content">
+                    	
+                 	<div class="page-content">
+                            
+                        <div class="container-fluid">
+                                			
+                            <div class="row">
+												
+								<div class="col-sm-12">
+
+									<h1>Dashboard</h1>
+
+									<div class="panel panel-brown">
+			
+										<div class="panel-body">
+													
+											<div class="row">
+
+												<div class="col-sm-4 panel">
+													<div class="panel-body">
+									                   <span><b>$0</b></span>&nbsp;&nbsp;<i class="ti ti-info-alt" data-toggle="tooltip" data-placement="right" data-original-title="Click on the bank account dollar amount to see all the funds waiting to be released to you."></i><br>
+									                   <a href="#" class="box-social-small">Bank Account</a>
+													</div>
+												</div>
+												<div class="col-sm-4 panel">
+													<div class="panel-body">
+														<span><b>Not Enough Data</b><small>/ 1</small></span>&nbsp;&nbsp;<i class="ti ti-info-alt" data-toggle="tooltip" data-placement="right" data-original-title="Influencers average engagement / influencers total reach."></i><br>
+									                   <a href="#" class="box-social-small">Avg. Engmt.</a>
+													</div>
+												</div>
+												<div class="col-sm-4 panel">
+													<div class="panel-body">
+														<span><b>0</b></span>&nbsp;&nbsp;<a href="#">
+														<i class="ti ti-star rating"></i>
+														<i class="ti ti-star rating"></i>
+														<i class="ti ti-star rating"></i>
+														<i class="ti ti-star rating"></i>
+														<i class="ti ti-star rating"></i></a><br>
+									                   	<a href="#" class="box-social-small">0 campaigns</a>
+													</div>
+												</div>
+											</div>
+													
+											<div class="in-dashboard-heading">
+												
+													<ul class="nav nav-tabs influ-dash">
+														<li class="active"><a href="#tab-7-1" data-toggle="tab">Order It </a></li>
+														<li><a href="#tab-7-2" data-toggle="tab"> Complete It</a></li>
+														<li><a href="#tab-7-3" data-toggle="tab"> Not Shipped</a></li>
+														<li><a href="#tab-7-4" data-toggle="tab"> Done</a></li>
+														<li><a href="#tab-7-5" data-toggle="tab"> ALL</a></li>
+														<li><a href="#tab-7-6" data-toggle="tab"> Rate</a></li>
+
+													</ul>
+												
+											</div>
+											<div class="in-dashboard-body">
+												<div class="tab-content">
+													<div class="tab-pane active" id="tab-7-1">
+														<div class="row no-margin tab-top">
+															<div class="col-md-6">
+															<div class="btn-group icheck">
+
+																<!-- <input type="checkbox" name="" value=""> Select All -->
+
+																<form>
+								      		
+																	<div class="form-check">
+																				    
+																	    <input class="form-check-input checkbox" type="checkbox" id="influencer-dashboard-select-filter" name="influencer-dashboard-select-filter">
+																	      
+																	      <label class="form-check-label" for="influencer-dashboard-select-filter">
+
+																	      	Select All
+																	        
+
+																	      </label>
+
+																	</div>
+
+														      	</form>
+
+															</div>
+
+																<div class="btn-group">
+																	<select name="selector1" id="selector1" class="form-control">
+																		<option>Bulk Action</option>
+																		<option>Remove yourself from campaign</option>
+																		<option>Block business</option>
+																		<option>Report business</option>
+																		<option>Add business to favorites</option>
+																		<option>Add business to favorites folder</option>
+																	</select>
+										                        </div>
+										                    </div>
+										                    <div class="col-md-6 text-right">
+										                        <label>Sort by: </label>
+										                        <div class="btn-group">
+																	<select name="selector1" id="selector1" class="form-control">
+																		<option>Time Remaining</option>
+																		<option>Status</option>
+																		<option>Date Applied</option>
+																		<option>Title</option>
+																	</select>
+										                        </div>
+										                        <a href="#"><i class="ti ti-arrow-circle-down"></i></a>
+										                        <a href="#"><i class="ti ti-arrow-circle-up"></i></a>
+
+																<!-- <a href="#" class="btn btn-default-alt pull-right"><i class="ti ti-plus"></i>&nbsp;&nbsp;Create Campaign</a> -->
+															</div>
+														</div>
+														<div class="panel panel-default" id="panel-inline">
+
+															<div class="col-xs-11 col-sm-4 col-md-3 col-lg-3">
+																<div class="card">
+																	<label class="check-box">
+																	  <input type="checkbox">
+																	  <span class="checkmark"></span>
+																	</label>
+															      <img src="{% static 'assets/images/pro-1.jpg' %}" class="img-responsive" alt="Jane">
+															      	<div class="in-campaign-info">
+															      		<ul class="name-link">
+									                                        <li><i class="ti ti-sharethis"></i>&nbsp;&nbsp;C138318</li>
+									                                        <li class="text-limit"><a class="link-font">Bride to Be Banner 2 Pieces Burlap Miss to Mrs Banner Bridal Shower Banner for Bridal Shower/Bachelorette/Engagement/Wedding Party Decorations Campaign</a></li>
+								                                    	</ul>
+																       
+																        <div class="in-campaign-icon">
+																	    	<p class="box-social2" align="left">
+																	           <span><b>10/10/19</b></span><br>
+																	           <span class="box-social-small">APPLIED</span>
+																	        </p>
+																	        <p class="box-social2" align="center">
+																	            <a href="influencer-campaign-applying.html" class="btn btn-primary btn-sm border-radius">Apply</a>
+																	        </p>
+																	        <p class="box-social2" align="right">
+																	            <span><b><strike>$17.99</strike> $5.99</b></span> <br>
+																	           <span class="box-social-small">DEAL.</span>
+																	        </p>
+																	        <div class="clearfix"></div>
+																        	
+																	    </div>
+																        <div class="social-icon-block" align="center">
+															            	
+																        	<a class="btn-floating mx-1 sm-color mb-0 btn-li" data-toggle="tooltip" data-placement="bottom" title="Direct - The product will be shipped directly to you via UPS">
+								                                                <i class="ti ti-truck"></i>
+								                                            </a>
+															            	<!--facebook -->
+																            <a href="#" class="btn-floating circle-social mx-1 mb-0 btn-li">
+																                <i class="fa fa-facebook"></i>
+																            </a>
+																            <!--Linkedin -->
+																            <a href="#" class="btn-floating circle-social mx-1 mb-0 btn-li">
+																                <i class="fa fa-linkedin "></i>
+																            </a>
+																            <!-- Twitter -->
+																            <a href="#" class="btn-floating circle-social mx-1 mb-0 btn-tw">
+																                <i class="fa fa-twitter "></i>
+																            </a>
+																            <!--Pinterest -->
+																            <a href="#" class="btn-floating circle-social mx-1 mb-0 btn-pin">
+																                <i class="fa fa-pinterest "></i>
+																            </a>
+																            <!--youtube -->
+																            <a href="#" class="btn-floating circle-social mx-1 mb-0 btn-li">
+																                <i class="fa fa-youtube"></i>
+																            </a>
+																	    </div>
+																	    
+																	 	<div class="row no-margin text-center in-campaign-footer">
+																	 		
+																	 		<div class="col-md-6 no-padding">
+																	 			<a href="#"><i class="ti ti-sharethis"></i>&nbsp;&nbsp;<span>Instructions</span></a>
+																	 		</div>
+
+																	 		<div class="col-md-6 no-padding">
+																	 			<a href="#"><i class="ti ti-email"></i>&nbsp;&nbsp;<span>0 Messages</span></a>
+																	 		</div>
+
+																	 	</div>
+
+																	</div>
+															    </div>
+															</div>
+											            </div>
+													</div>
+													<div class="tab-pane" id="tab-7-2">
+														
+													</div>
+													<div class="tab-pane" id="tab-7-3">
+														
+													</div>
+												</div>
+											</div>
+
+
+
+												</div>
+											</div>
+										</div>
+									</div>
+						        </div> <!-- .container-fluid -->
+                       		</div> <!-- #page-content -->
+                    	</div>
+
+                    <footer>
+
+		        		<p>&copy; 2020 Influicea</p>
+
+			        </footer>
+			        <!--<footer role="contentinfo">
+					    <div class="clearfix">
+					        <ul class="list-unstyled list-inline pull-left">
+					            <li><h6 style="margin: 0;">&copy; 2019 Influenzo</h6></li>
+					        </ul>
+					        <button class="pull-right btn btn-link btn-xs hidden-print" id="back-to-top"><i class="ti ti-arrow-up"></i></button>
+					    </div>
+					</footer>-->
+
+				</div>
+			</div>
+		</div>
+
+    </div>
+</div>
+</div>
+	    
+		<script>
+	        var mini = true;
+
+	        function toggleSidebar() {
+	            if (mini) {
+	                console.log("opening sidebar");
+	                document.getElementById("mySidebar").style.width = "280px";
+	               
+	                this.mini = false;
+	            } else {
+	                console.log("closing sidebar");
+	                document.getElementById("mySidebar").style.width = "55px";
+	                
+	                this.mini = true;
+	            }
+	        }
+   		 </script>
+
+   		 <script>
+			$(document).ready(function(){
+			  $('[data-toggle="tooltip"]').tooltip();   
+			});
+		</script>
+
+		<script>
+			function openNav() {
+			  document.getElementById("mySidepanel").style.width = "250px";
+			}
+
+			function closeNav() {
+			  document.getElementById("mySidepanel").style.width = "0";
+			}
+		</script>
+		<!-- Load site level scripts -->
+		<script type="text/javascript" src="{% static 'assets/js/jquery-1.10.2.min.js' %}"></script> 							<!-- Load jQuery -->
+		<script type="text/javascript" src="{% static 'assets/js/jqueryui-1.10.3.min.js' %}"></script> 							<!-- Load jQueryUI -->
+		<script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js'%}"></script> 								<!-- Load Bootstrap -->
+		<script type="text/javascript" src="{% static 'assets/js/enquire.min.js' %}"></script> 									<!-- Load Enquire -->
+		<script type="text/javascript" src="{% static 'assets/plugins/velocityjs/velocity.min.js' %}"></script>					<!-- Load Velocity for Animated Content -->
+		<script type="text/javascript" src="{% static 'assets/plugins/velocityjs/velocity.ui.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/plugins/wijets/wijets.js' %}"></script>     						<!-- Wijet -->
+		<script type="text/javascript" src="{% static 'assets/plugins/iCheck/icheck.min.js' %}"></script>     					<!-- iCheck -->
+		<script type="text/javascript" src="{% static 'assets/plugins/bootstrap-switch/bootstrap-switch.js' %}"></script> 		<!-- Swith/Toggle Button -->
+		<script type="text/javascript" src="{% static 'assets/plugins/bootstrap-tabdrop/js/bootstrap-tabdrop.js' %}"></script>  <!-- Bootstrap Tabdrop -->
+		<script type="text/javascript" src="{% static 'assets/plugins/iCheck/icheck.min.js' %}"></script>     					<!-- iCheck -->
+		<script type="text/javascript" src="{% static 'assets/plugins/nanoScroller/jquery.nanoscroller.min.js' %}"></script> <!-- nano scroller -->
+		<script type="text/javascript" src="{% static 'assets/js/application.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/demo/demo.js' %}"></script>
+		<script type="text/javascript" src="{% static 'assets/demo/demo-switcher.js' %}"></script>
+    </body>
+</html>
